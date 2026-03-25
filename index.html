@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passkey Wallet</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a0a;
+            color: #e5e5e5;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            text-align: center;
+            max-width: 480px;
+            padding: 2rem;
+        }
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            border-radius: 20px;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+        }
+        h1 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #fff;
+        }
+        .subtitle {
+            color: #737373;
+            font-size: 0.95rem;
+            margin-bottom: 2rem;
+            line-height: 1.5;
+        }
+        .features {
+            display: grid;
+            gap: 1rem;
+            text-align: left;
+            margin-bottom: 2rem;
+        }
+        .feature {
+            background: #171717;
+            border: 1px solid #262626;
+            border-radius: 12px;
+            padding: 1rem 1.25rem;
+        }
+        .feature strong {
+            color: #fff;
+            display: block;
+            margin-bottom: 0.25rem;
+            font-size: 0.9rem;
+        }
+        .feature span {
+            color: #737373;
+            font-size: 0.8rem;
+        }
+        .badge {
+            display: inline-block;
+            background: #1e1e1e;
+            border: 1px solid #333;
+            border-radius: 999px;
+            padding: 0.4rem 1rem;
+            font-size: 0.75rem;
+            color: #a1a1a1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">&#x1f511;</div>
+        <h1>Passkey Wallet</h1>
+        <p class="subtitle">
+            Ethereum smart contract wallet powered by native passkeys.
+            No seed phrases. No private key export. Biometric-only.
+        </p>
+        <div class="features">
+            <div class="feature">
+                <strong>Secure Enclave Keys</strong>
+                <span>P-256 keys generated and stored in Apple's Secure Enclave. Private keys never leave the device.</span>
+            </div>
+            <div class="feature">
+                <strong>Deterministic Wallets</strong>
+                <span>Smart contract wallet address derived via CREATE2 from your passkey's public key.</span>
+            </div>
+            <div class="feature">
+                <strong>On-Chain Verification</strong>
+                <span>Signatures verifiable on-chain via the RIP-7212 P-256 precompile.</span>
+            </div>
+        </div>
+        <span class="badge">Proof of Concept</span>
+    </div>
+</body>
+</html>
